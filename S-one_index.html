@@ -1,0 +1,866 @@
+<DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-874" />
+    <title>Home</title>
+    <link rel="stylesheet" href="CSS/style_Sone.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <style type="text/css">
+    </style>
+    <script type="text/javascript">
+      function MM_findObj(n, d) {
+        var p, i, x;
+        if (!d) d = document;
+        if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+          d = parent.frames[n.substring(p + 1)].document;
+          n = n.substring(0, p);
+        }
+        if (!(x = d[n]) && d.all) x = d.all[n];
+        for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+        for (i = 0; !x && d.layers && i < d.layers.length; i++)
+          x = MM_findObj(n, d.layers[i].document);
+        if (!x && d.getElementById) x = d.getElementById(n);
+        return x;
+      }
+      function MM_preloadImages() {
+        var d = document;
+        if (d.images) {
+          if (!d.MM_p) d.MM_p = new Array();
+          var i,
+            j = d.MM_p.length,
+            a = MM_preloadImages.arguments;
+          for (i = 0; i < a.length; i++)
+            if (a[i].indexOf("#") != 0) {
+              d.MM_p[j] = new Image();
+              d.MM_p[j++].src = a[i];
+            }
+        }
+      }
+      function MM_swapImgRestore() {
+        var i,
+          x,
+          a = document.MM_sr;
+        for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++)
+          x.src = x.oSrc;
+      }
+      function MM_swapImage() {
+        //v3.0
+        var i,
+          j = 0,
+          x,
+          a = MM_swapImage.arguments;
+        document.MM_sr = new Array();
+        for (i = 0; i < a.length - 2; i += 3)
+          if ((x = MM_findObj(a[i])) != null) {
+            document.MM_sr[j++] = x;
+            if (!x.oSrc) x.oSrc = x.src;
+            x.src = a[i + 2];
+          }
+      }
+        function toggleNavDotDesc() {
+          const dotClick = document.querySelector('.dot-click');
+          const dotIcon = document.querySelector('.dot');
+          dotClick.classList.toggle('d-none');
+          if (dotClick.classList.contains('d-none')) {
+            dotIcon.classList.remove('open'); 
+          } else {
+            dotIcon.classList.add('open'); 
+          }
+        }
+document.addEventListener('DOMContentLoaded', function() {
+  const searchForm = document.getElementById('search-form');
+  const searchToggle = document.getElementById('search-toggle');
+  const closeBtn = document.getElementById('close-btn');
+
+  searchToggle.addEventListener('click', function(event) {
+    event.preventDefault();
+    searchForm.classList.add('show');
+  });
+
+  closeBtn.addEventListener('click', function() {
+    searchForm.classList.remove('show');
+  });
+
+
+  document.addEventListener('click', function(event) {
+    if (!searchForm.contains(event.target) && !searchToggle.contains(event.target)) {
+      searchForm.classList.remove('show');
+    }
+  });
+});
+
+
+    </script>
+    <link href="CSS/style_Sone.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body
+    onload="MM_preloadImages('images/SOne_index_iconeng.jpg','images/SOne_index_btyoutube1.png','images/SOne_index_bttwitter1.png','images/SOne_index_btfacebook1.png','images/SOne_index_menu02.png','images/SOne_index_bt-tire1.jpg','images/SOne_index_bt-break1.jpg','images/SOne_index_bt-battery1.jpg','images/SOne_index_bt-chokeup1.jpg','images/SOne_index_bt-oil1.jpg','images/SOne_index_bt-guarantee1.jpg','images/SOne_index_bullet1.png')"
+  >
+    <div class="container ">
+      <div class="table-responsive">
+          <div align="center" valign="top">
+            <div width="100%" border="0">
+
+<header>
+    <div class="d-flex flex-md-row justify-content-between align-items-center">
+        <div class="logo">
+            <img src="images/SOne_index_logo.png" alt="logo" class="img-fluid" height="100" />
+        </div>
+      
+        <div class="sm-screen-header gap-2">  
+              <p class="toggle-icon">
+                 <a href="#" id="search-toggle">
+                  <img src="images/SOne_index_btsearch.jpg" width="23" height="23" border="0" />
+                </a>
+              </p>
+              <p class="dot" onclick="toggleNavDotDesc()">
+                <span></span>
+                <span></span>
+                <span></span>
+              </p>
+    </div>
+
+     <div class="search-form bg-dark gap-2  d-flex rounded-3" id="search-form">
+    <button class="close-btn" id="close-btn">x</button>
+    <input class="form-control" type="text" placeholder="Search..." aria-label="search ..." />
+    <p class="toggle-icon">
+                 <a href="#" id="search-toggle">
+                  <img src="images/SOne_index_btsearch.jpg" width="23" height="23" border="0" />
+                </a>
+              </p>
+
+  </div>
+
+      <div class="dot-click d-none bg-dark text-white border border-white rounded-2">
+        
+            <div class="langauge">
+              <img src="images/SOne_index_iconthai.jpg" width="25" height="18" />
+              <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','images/SOne_index_iconeng.jpg',1)">
+                <img src="images/SOne_index_iconeng2.jpg" name="Image1" width="25" height="18" border="0" id="Image1"/>
+              </a>
+            </div>
+              <div class="header-about "> 
+                    <a href="#" class="link_Tblack13">About S-ONE</a> 
+                    <a href="#" class="link_Tblack13">Job Opportunity</a> 
+                    <a href="#" class="link_Tblack13">Contact Us</a> 
+                    <a href="#" class="link_Tblack13">Site Map</a>
+            </div>               
+
+              <div class="option ">
+  <div class="option-list p-3">
+    <div class="product flex-css">
+      <a
+        href="#"
+        onmouseout="MM_swapImgRestore()"
+        onmouseover="MM_swapImage('Image8','','images/SOne_index_menu02.png',1)"
+      >
+        <img
+          src="images/SOne_index_menu01.png"
+          name="Image8"
+          id="Image8"
+          width="20"
+          height="20"
+          
+        />
+      </a>
+      <div class="text_orange13">Product & Services</div>
+    </div>
+
+    <div class="promotion flex-css">
+      <a
+        href="#"
+        onmouseout="MM_swapImgRestore()"
+        onmouseover="MM_swapImage('Image8','','images/SOne_index_menu02.png',1)"
+      >
+        <img
+          src="images/SOne_index_menu01.png"
+          name="Image8"
+          width="20"
+          height="20"
+          border="0"
+          id="Image8"
+        />
+      </a>
+      <a href="#" class="link_Twhite13">
+        Promotions
+      </a>
+    </div>
+
+    <div class="news flex-css">
+      <a
+        href="#"
+        onmouseout="MM_swapImgRestore()"
+        onmouseover="MM_swapImage('Image8','','images/SOne_index_menu02.png',1)"
+      >
+        <img
+          src="images/SOne_index_menu01.png"
+          name="Image8"
+          width="20"
+          height="20"
+          border="0"
+          id="Image8"
+        />
+      </a>
+      <a href="#" class="link_Twhite13">
+        News & Events
+      </a>
+    </div>
+
+    <div class="safety flex-css">
+      <a
+        href="#"
+        onmouseout="MM_swapImgRestore()"
+        onmouseover="MM_swapImage('Image8','','images/SOne_index_menu02.png',1)"
+      >
+        <img
+          src="images/SOne_index_menu01.png"
+          name="Image8"
+          width="20"
+          height="20"
+          border="0"
+          id="Image8"
+        />
+      </a>
+      <a href="#" class="link_Twhite13">
+        Safety tip!
+      </a>
+    </div>
+
+    <div class="faq flex-css">
+      <a
+        href="#"
+        onmouseout="MM_swapImgRestore()"
+        onmouseover="MM_swapImage('Image8','','images/SOne_index_menu02.png',1)"
+      >
+        <img
+          src="images/SOne_index_menu01.png"
+          name="Image8"
+          width="20"
+          height="20"
+          border="0"
+          id="Image8"
+        />
+      </a>
+      <a href="#" class="link_Twhite13">
+        FAQ
+      </a>
+    </div>
+
+    <div class="location flex-css">
+      <a
+        href="#"
+        onmouseout="MM_swapImgRestore()"
+        onmouseover="MM_swapImage('Image8','','images/SOne_index_menu02.png',1)"
+      >
+        <img
+          src="images/SOne_index_menu01.png"
+          name="Image8"
+          width="20"
+          height="20"
+          border="0"
+          id="Image8"
+        />
+      </a>
+      <a href="#" class="link_Twhite13">
+        Location
+      </a>
+    </div>
+  </div>
+
+  <div class="option-app ">
+    <div class="facebook">
+      <a
+        href="#"
+        onmouseout="MM_swapImgRestore()"
+        onmouseover="MM_swapImage('Image6','','images/SOne_index_btfacebook1.png',1)"
+      >
+        <img
+          src="images/SOne_index_btfacebook.png"
+          name="Image6"
+          width="20"
+          height="20"
+          border="0"
+          id="Image6"
+        />
+      </a>
+    </div>
+
+    <div class="twitter">
+      <a
+        href="#"
+        onmouseout="MM_swapImgRestore()"
+        onmouseover="MM_swapImage('Image5','','images/SOne_index_bttwitter1.png',1)"
+      >
+        <img
+          src="images/SOne_index_bttwitter.png"
+          name="Image5"
+          width="20"
+          height="20"
+          border="0"
+          id="Image5"
+        />
+      </a>
+    </div>
+
+    <div class="youtube">
+      <a
+        href="#"
+        onmouseout="MM_swapImgRestore()"
+        onmouseover="MM_swapImage('Image4','','images/SOne_index_btyoutube1.png',1)"
+      >
+        <img
+          src="images/SOne_index_btyoutube.png"
+          name="Image4"
+          width="20"
+          height="20"
+          border="0"
+          id="Image4"
+        />
+      </a>
+    </div>
+  </div>
+              </div>
+
+      </div>   
+      <div class="md-screen-header mt-1 w-100">
+            <form id="form1" name="form1" method="post" action="" class="m-2">
+              <div class="d-flex d-md-grid justify-content-center justify-content-md-end gap-2 gap-md-none">
+                <div class="langauge d-flex justify-content-center justify-content-md-end gap-2 mb-2">
+                    <img src="images/SOne_index_iconthai.jpg" width="25" height="18" class="d-none d-md-inline" />
+                    <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','images/SOne_index_iconeng.jpg',1)">
+                        <img src="images/SOne_index_iconeng2.jpg" name="Image1" width="25" height="18" border="0" id="Image1" class="d-none d-md-inline" />
+                    </a>
+                </div>
+                <div class="input-search d-flex justify-content-center d-none d-md-flex justify-content-md-end mb-4">
+                    <input type="text" class="formLoginsearch border-color " value="Search..." />
+                    <a href="#">
+                        <img src="images/SOne_index_btsearch.jpg" width="23" height="23" border="0" />
+                    </a>
+                </div>
+                <div class="header-about d-flex justify-content-center justify-content-md-end d-none d-md-flex"> 
+                    <a href="#" class="link_Tblack13">About S-ONE</a> |
+                    <a href="#" class="link_Tblack13">Job Opportunity</a> |
+                    <a href="#" class="link_Tblack13">Contact Us</a> |
+                    <a href="#" class="link_Tblack13">Site Map</a>
+                </div>
+              </div>
+            </form>
+      </div>
+    </div>
+</header>
+
+<div class="mb-2 mt-2 d-none d-md-flex">
+                <td align="left" valign="top">
+                  <table
+                    width="100%"
+                    border="0"
+                    cellspacing="0"
+                    cellpadding="0"
+                  >
+                    <tr>
+                      <td
+                        width="5"
+                        height="35"
+                        align="left"
+                        valign="middle"
+                        background="images/SOne_index_bgmenu01.png"
+                        style="
+                          background-repeat: no-repeat;
+                          background-position: left top;
+                        "
+                      >
+                        &nbsp;
+                      </td>
+                      <td
+                        align="left"
+                        valign="middle"
+                        background="images/SOne_index_bgmenu02.png"
+                        style="
+                          background-repeat: repeat-x;
+                          background-position: center top;
+                        "
+                      >
+                        <table
+                          width="100%"
+                          border="0"
+                          cellspacing="0"
+                          cellpadding="0"
+                        >
+                          <tr>
+                            <td width="25" align="left" valign="middle">
+                              <img
+                                src="images/SOne_index_menu02.png"
+                                width="20"
+                                height="20"
+                                class="img-fluid"
+                              />
+                            </td>
+                            <td
+                              width="140"
+                              align="left"
+                              valign="middle"
+                              class="text_orange13"
+                            >
+                              Product &amp; Services
+                            </td>
+                            <td width="25" align="left" valign="middle">
+                              <a
+                                href="#"
+                                onmouseout="MM_swapImgRestore()"
+                                onmouseover="MM_swapImage('Image8','','images/SOne_index_menu02.png',1)"
+                                ><img
+                                  src="images/SOne_index_menu01.png"
+                                  name="Image8"
+                                  width="20"
+                                  height="20"
+                                  border="0"
+                                  id="Image8"
+                              /></a>
+                            </td>
+                            <td width="100" align="left" valign="middle">
+                              <a href="#" class="link_Twhite13">Promotions </a>
+                            </td>
+                            <td width="25" align="left" valign="middle">
+                              <a
+                                href="#"
+                                onmouseout="MM_swapImgRestore()"
+                                onmouseover="MM_swapImage('Image21','','images/SOne_index_menu02.png',1)"
+                                ><img
+                                  src="images/SOne_index_menu01.png"
+                                  name="Image21"
+                                  width="20"
+                                  height="20"
+                                  border="0"
+                                  id="Image21"
+                              /></a>
+                            </td>
+                            <td width="120" align="left" valign="middle">
+                              <a href="#" class="link_Twhite13"
+                                >News &amp; Events</a
+                              >
+                            </td>
+                            <td width="25" align="left" valign="middle">
+                              <a
+                                href="#"
+                                onmouseout="MM_swapImgRestore()"
+                                onmouseover="MM_swapImage('Image22','','images/SOne_index_menu02.png',1)"
+                                ><img
+                                  src="images/SOne_index_menu01.png"
+                                  name="Image22"
+                                  width="20"
+                                  height="20"
+                                  border="0"
+                                  id="Image22"
+                              /></a>
+                            </td>
+                            <td width="100" align="left" valign="middle">
+                              <a href="#" class="link_Twhite13">Safety Tips</a>
+                            </td>
+                            <td width="25" align="left" valign="middle">
+                              <a
+                                href="#"
+                                onmouseout="MM_swapImgRestore()"
+                                onmouseover="MM_swapImage('Image23','','images/SOne_index_menu02.png',1)"
+                                ><img
+                                  src="images/SOne_index_menu01.png"
+                                  name="Image23"
+                                  width="20"
+                                  height="20"
+                                  border="0"
+                                  id="Image23"
+                              /></a>
+                            </td>
+                            <td width="70" align="left" valign="middle">
+                              <a href="#" class="link_Twhite13">FAQS </a>
+                            </td>
+                            <td width="25" align="left" valign="middle">
+                              <a
+                                href="#"
+                                onmouseout="MM_swapImgRestore()"
+                                onmouseover="MM_swapImage('Image241','','images/SOne_index_menu02.png',1)"
+                                ><img
+                                  src="images/SOne_index_menu01.png"
+                                  name="Image241"
+                                  width="20"
+                                  height="20"
+                                  border="0"
+                                  id="Image241"
+                              /></a>
+                            </td>
+                            <td align="left" valign="middle">
+                              <a href="#" class="link_Twhite13">Location</a>
+                            </td>
+                            <td width="50" align="right" valign="middle">
+                              <a
+                                href="#"
+                                onmouseout="MM_swapImgRestore()"
+                                onmouseover="MM_swapImage('Image6','','images/SOne_index_btfacebook1.png',1)"
+                                ><img
+                                  src="images/SOne_index_btfacebook.png"
+                                  name="Image6"
+                                  width="20"
+                                  height="20"
+                                  border="0"
+                                  id="Image6"
+                              /></a>
+                            </td>
+                            <td width="25" align="right" valign="middle">
+                              <a
+                                href="#"
+                                onmouseout="MM_swapImgRestore()"
+                                onmouseover="MM_swapImage('Image5','','images/SOne_index_bttwitter1.png',1)"
+                                ><img
+                                  src="images/SOne_index_bttwitter.png"
+                                  name="Image5"
+                                  width="20"
+                                  height="20"
+                                  border="0"
+                                  id="Image5"
+                              /></a>
+                            </td>
+                            <td width="25" align="right" valign="middle">
+                              <a
+                                href="#"
+                                onmouseout="MM_swapImgRestore()"
+                                onmouseover="MM_swapImage('Image4','','images/SOne_index_btyoutube1.png',1)"
+                                ><img
+                                  src="images/SOne_index_btyoutube.png"
+                                  name="Image4"
+                                  width="20"
+                                  height="20"
+                                  border="0"
+                                  id="Image4"
+                              /></a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td
+                        width="5"
+                        align="left"
+                        valign="middle"
+                        background="images/SOne_index_bgmenu03.png"
+                        style="
+                          background-repeat: no-repeat;
+                          background-position: right top;
+                        "
+                      >
+                        &nbsp;
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+</div>
+
+<div class="tire-search d-grid d-md-flex gap-2 m-2">
+  <div class="d-grid tire-search-con" style="background-image: url('images/SOne_index_bg_searchtype.jpg'); background-repeat: no-repeat; background-position: center; ">
+    <div class="tire-search-title  Su_white21">ค้นหายาง</div>
+    <div class="tire-search-sub"> 
+      <div class="sub-title-search">หน้ายาง</div>
+      <div class="text_white13">ความกว้าง (มม.)</div>
+      <select
+    class="formLogintype"
+    id="select" >
+      <option>--เลือกหน้ายาง--</option>
+    </select>
+     
+     <div>
+       <div class="sub-title-search"> ซีรี่ย์</div>
+      <div class="text_white13">อัตราส่วนความสูงแก้มยาง (%)</div>
+      <select
+    class="formLogintype"
+    id="select" >
+      <option>--เลือกซีรี่ย์--</option>
+    </select>
+     </div>
+     <div>
+       <div class="sub-title-search">กระทะล้อ</div>
+      <div class="text_white13">เส้นผ่าศูนย์กลาง (นิ้ว)</div>
+      <select
+    class="formLogintype"
+    id="select" >
+      <option>--เลือกล้อกระทะ--</option>
+    </select>
+     </div>
+    <div class="d-flex mt-2 search-button ">
+      <img src="images/SOne_index_search.png" width="100" style="margin-left: 20px height="24" border="0"></div>
+    </div>
+  </div> 
+  <div class="bg-con d-none d-md-inline" style="background-image: url('images/SOne_index_banner.jpg'); background-repeat: no-repeat; background-position:
+   center; background-size: cover; width: 1020px; height: 350px;"></div>
+
+    <div class="pic-scroll-con d-none d-md-inline">
+      <div>
+        <a href="#"><img src="images/SOne_index_arrowup.png" width="28" height="15" border="0" /></a>
+      </div>
+      <div>
+        <img src="images/SOne_index_pic01.jpg" width="124" height="67" />
+      </div>
+      <div>
+        <img src="images/SOne_index_pic02.jpg" width="124" height="67" />
+      </div>
+      <div>
+        <img src="images/SOne_index_pic02.jpg" width="124" height="67" />
+      </div>
+      <div>
+        <a href="#"><img src="images/SOne_index_arrowdown.png" width="28" height="15" border="0" /></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex justify-content-around gap-2 flex-wrap banner">
+      
+        <div class="image-container">
+            <a href="#" class="image-link"
+               onmouseover="this.querySelector('img').src='images/SOne_index_bt-tire1.jpg';"
+               onmouseout="this.querySelector('img').src='images/SOne_index_bt-tire.jpg';">
+                <img src="images/SOne_index_bt-tire.jpg" alt="Tire"/>
+            </a>
+        </div>
+       
+        <div class="image-container">
+            <a href="#" class="image-link"
+               onmouseover="this.querySelector('img').src='images/SOne_index_bt-break1.jpg';"
+               onmouseout="this.querySelector('img').src='images/SOne_index_bt-break.jpg';">
+                <img src="images/SOne_index_bt-break.jpg" alt="Break"/>
+            </a>
+        </div>
+       
+        <div class="image-container">
+            <a href="#" class="image-link"
+               onmouseover="this.querySelector('img').src='images/SOne_index_bt-battery1.jpg';"
+               onmouseout="this.querySelector('img').src='images/SOne_index_bt-battery.jpg';">
+                <img src="images/SOne_index_bt-battery.jpg" alt="Battery"/>
+            </a>
+        </div>
+       
+        <div class="image-container">
+            <a href="#" class="image-link"
+               onmouseover="this.querySelector('img').src='images/SOne_index_bt-chokeup1.jpg';"
+               onmouseout="this.querySelector('img').src='images/SOne_index_bt-chokeup.jpg';">
+                <img src="images/SOne_index_bt-chokeup.jpg" alt="Choke Up"/>
+            </a>
+        </div>
+       
+        <div class="image-container">
+            <a href="#" class="image-link"
+               onmouseover="this.querySelector('img').src='images/SOne_index_bt-oil1.jpg';"
+               onmouseout="this.querySelector('img').src='images/SOne_index_bt-oil.jpg';">
+                <img src="images/SOne_index_bt-oil.jpg" alt="Oil"/>
+            </a>
+        </div>
+       
+        <div class="image-container">
+            <a href="#" class="image-link"
+               onmouseover="this.querySelector('img').src='images/SOne_index_bt-guarantee1.jpg';"
+               onmouseout="this.querySelector('img').src='images/SOne_index_bt-guarantee.jpg';">
+                <img src="images/SOne_index_bt-guarantee.jpg" alt="Guarantee"/>
+            </a>
+        </div>
+</div>
+
+<div class="container-120 d-grid d-md-flex gap-2 mt-2">
+                <div class="d-grid "> 
+                <p class="title-search">ค้นหาศูนย์บริการใกล้บ้านคุณ</p>
+                <div class="address-form ">
+                  <form id="form3" name="form2" method="post" action="">
+                      <div class="select-form">
+                         <label for="select7">จังหวัด</label>
+                           <select name="select5" class="formLogintype" id="select7">
+                              <option>--เลือกจังหวัด--</option>
+                                   </select>
+                      </div>
+                      <div class="select-form">
+                         <label for="select8">เขต/อำเภอ</label>
+                          <select name="select6" class="formLogintype" id="select8">
+                           <option>--เลือกอำเภอ--</option>
+                         </select>
+                       </div>
+                      <div class="select-form">
+                      <label for="select9">ถนน</label>
+                       <select name="select7" class="formLogintype" id="select9">
+                        <option>--เลือกถนน--</option>
+                       </select>
+                       </div>
+                        <p class="pl">หมายเหตุ:กรุณาเลือกอย่างใดอย่างหนึ่ง</p>
+                         <button type="submit" class="button-search">ค้นหา</button>
+                   </form>
+                    </div>
+                </div>
+                <div class="mid-con">
+                  <div class="news">
+                    <p>	News & Events</p>
+                     <div>
+                     <img src="images/SOne_index_bullet1.png" alt="dott" />
+                      <a
+                     href="#"
+                     onmouseout="MM_swapImgRestore()"
+                    onmouseover="MM_swapImage('Image28','','images/SOne_index_bullet1.png',1)"
+                       >
+                     <img src="images/SOne_index_bullet2.png" />
+                      </a>
+                     <a
+                     href="#"
+                     onmouseout="MM_swapImgRestore()"
+                      onmouseover="MM_swapImage('Image29','','images/SOne_index_bullet1.png',1)"
+                      >
+                     <img src="images/SOne_index_bullet2.png" />
+                      </a>
+                     </div>
+                  </div>
+                  <div class="news-content">
+                     <div class="news-item news-item-right">
+                        <div class="news-image-container">
+                         <img src="images/SOne_index_pic3.jpg" alt="" class="news-image" />
+                          <p class="news-date">19<br />NOV<br />2014</p>
+                        </div>
+                        <p class="news-description">
+                           ข่าวใหม่!! ข่าวและกิจกรรมข่าวและกิจกรรมละกิจกรรมข่าวและกิจกรรมละกิจกรรมข่าวและกิจกรรม
+                             </p>
+                      </div>
+
+                    <div class="news-item news-item-right">
+                        <div class="news-image-container">
+                         <img src="images/SOne_index_pic3.jpg" alt="" class="news-image" />
+                          <p class="news-date">19<br />NOV<br />2014</p>
+                         </div>
+                        <p class="news-description">
+                         ข่าวใหม่!! ข่าวและกิจกรรมข่าวและกิจกรรมละกิจกรรมข่าวและกิจกรรมละกิจกรรมข่าวและกิจกรรม
+                        </p>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-image-container">
+                        <img src="images/SOne_index_pic3.jpg" alt="" class="news-image" />
+                        <p class="news-date ">19<br />NOV<br />2014</p>
+                         </div>
+                        <p class="news-description">
+                         ข่าวใหม่!! ข่าวและกิจกรรมข่าวและกิจกรรมละกิจกรรมข่าวและกิจกรรมละกิจกรรมข่าวและกิจกรรม
+                        </p>
+                   </div>
+                  </div>
+                </div>     
+                <div class="d-grid contact-info">
+                  <div class="d-flex gap-0  right-con">
+                <div class="pic-tip ">
+                   <img src="images/SOne_index_tips1.png" alt="" />
+                </div>
+                <div class="d-grid  safe-tip-con">
+                    <p class="title-desc">Safe tip!</p>
+                    <div class="text-start ">
+                        <img src="images/SOne_index_pic66.png" alt="" />
+                    </div>
+                     <div>
+                         <p class="desc">ควรเติมน้ำมันตอนเช้า ขณะที่อุณหภูมิบนพื้น ดินยังเย็นอยู่</p>
+                    </div>
+                    <div class="text-end">
+                         <img src="images/SOne_index_pic99.png" alt="" />
+                    </div>
+                </div>
+              </div> 
+              <div class="d-flex p-2 gap-2 justify-content-center">
+              <div class="fs-4">สมัครรับข่าวสาร</div>
+              <div class="email-input">
+                <input type="text" placeholder="กรุณาใส่อีเมล" />
+                <button>go</button>
+              </div>
+            </div>
+
+                  <hr />
+            <div class="call"><img src="images/SOne_index_call.png" alt="" /></div>
+                </div>
+</div>
+<footer class="d-flex mt-3 mb-3 gap-0  " width="100%">
+                      <div width="130" align="left" valign="top">
+                        <img
+                          src="images/SOne_index_logos.png"
+                          width="130"
+                          height="35"
+                        />
+                      </div>
+                      <td align="left" valign="top">
+                        <table
+                          width="100%"
+                          border="0"
+                          cellspacing="0"
+                          cellpadding="0"
+                        >
+                          <tr>
+                            <td
+                              width="5"
+                              height="35"
+                              align="left"
+                              valign="middle"
+                              background="images/SOne_index_bgmenu01.png"
+                              style="
+                                background-repeat: no-repeat;
+                                background-position: left top;
+                              "
+                            >
+                              &nbsp;
+                            </td>
+                            <td
+                              align="left"
+                              valign="middle"
+                              background="images/SOne_index_bgmenu02.png"
+                              style="
+                                background-repeat: repeat-x;
+                                background-position: center top;
+                              "
+                            >
+                              <table
+                                width="100%"
+                                border="0"
+                                cellspacing="0"
+                                cellpadding="0"
+                              >
+                                <tr>
+                                  <td
+                                    align="left"
+                                    valign="middle"
+                                    class="text_white10"
+                                  >
+                                    Copyright &copy; 2014
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td
+                              width="5"
+                              align="left"
+                              valign="middle"
+                              background="images/SOne_index_bgmenu03.png"
+                              style="
+                                background-repeat: no-repeat;
+                                background-position: right top;
+                              "
+                            >
+                              &nbsp;
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                   
+                  
+           
+</footer>
+</div>
+       </div>
+    </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </div>
+  </body>
+
+  </body>
+</html>
